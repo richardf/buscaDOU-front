@@ -1,0 +1,35 @@
+<form [formGroup]="keywordForm" (ngSubmit)="addKeyword()">
+
+  <mat-form-field class="form-full-width" appearance="outline">
+      <mat-label>Termo de Busca</mat-label>
+      <input matInput placeholder="Douglas Adams" formControlName="keyword">
+
+      <mat-hint align="start" *ngIf="keywordForm.get('keyword').value && keywordForm.get('keyword').valid">
+        Você será notificado(a) quando a string <strong>{{keywordForm.get('keyword').value}}</strong> for encontrada no DOU
+      </mat-hint>
+
+      <mat-error *ngIf="keywordForm.controls.keyword.invalid && keywordForm.controls.keyword.errors.required">
+        Campo obrigatório
+      </mat-error>
+      <mat-error *ngIf="keywordForm.controls.keyword.invalid && keywordForm.controls.keyword.errors.minlength">
+        Digite ao menos 5 caracteres
+      </mat-error>
+      <mat-error *ngIf="keywordForm.controls.keyword.invalid && keywordForm.controls.keyword.errors.maxlength">
+        O tamanho máximo permitido é de 64 caracteres    
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="form-full-width" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+
+      <mat-error *ngIf="keywordForm.controls.email.invalid && keywordForm.controls.email.errors.required">
+          Campo obrigatório
+      </mat-error>
+      <mat-error *ngIf="keywordForm.controls.email.invalid && keywordForm.controls.email.errors.email">
+        Digite um email válido  
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="keywordForm.invalid">Cadastrar!</button>
+  </form>
