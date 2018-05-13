@@ -1,0 +1,47 @@
+.form-full-width {
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin: 50px;    
+}
+
+header h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.white-text {
+    color: white;
+}
+
+header h3 {
+    color: darkgray;
+}
+
+footer {
+    background-color: #3f51b5;
+    color: white;
+    padding: 2em;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+footer::after {
+    background: linear-gradient(-225deg, #ffffff 8px, transparent 0), linear-gradient(225deg, #ffffff 8px, transparent 0);
+    background-position: left-bottom;
+    background-repeat: repeat-x;
+    background-size: 16px 16px;
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 16px;
+}
