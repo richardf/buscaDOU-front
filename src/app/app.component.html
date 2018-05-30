@@ -1,25 +1,13 @@
 <aside class="mat-typography">
     <mat-toolbar color="primary">
-      <nav>
-          <span><mat-icon class="white-text" inline="true">notifications_active</mat-icon>BuscaDOU</span>
-      </nav>
+        <nav>
+            <a routerLink="/" class="logo">
+                <span><mat-icon class="white-text" inline="true">notifications_active</mat-icon> BuscaDOU</span>
+            </a>
+        </nav>
     </mat-toolbar>
 </aside>
 
-<header class="mat-typography">
-    <h1 data="Seja notificado quando">Seja notificado quando termos de seu interesse aparecerem no Diário Oficial da União</h1>
-    <h3>Cadastre os termos de seu interesse e receba um email quando eles aparecerem no DOU</h3>
-</header>
+<router-outlet></router-outlet>
 
-<main class="container mat-typography" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center">
-  <div fxFlex="20%" fxHide.xs></div>
-
-  <div fxFlex="60%">
-    <app-register-keyword></app-register-keyword>
-  </div>
-
-  <div fxFlex="20%" fxHide.xs></div>
-</main>
-
-<footer class="mat-typography footer">
-</footer>
+<footer class="mat-typography footer"></footer>
