@@ -1,0 +1,12 @@
+.checkmark {
+    text-align: center;
+}
+
+.checkmark .mat-icon {
+    color: green;
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    margin: 20px;
+}
