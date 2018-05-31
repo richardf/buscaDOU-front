@@ -34,3 +34,11 @@ footer::after {
 .mat-toolbar {
     box-shadow: 0px 1px 1px grey;
 }
+
+.github {
+    position: absolute;
+    right: 20px;
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+}
